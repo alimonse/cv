@@ -14,12 +14,14 @@ import {CardModule} from "primeng/card";
 import { CardHabilidadComponent } from './componentes/card-habilidad/card-habilidad.component';
 import {AngularFireModule} from "@angular/fire";
 import {environment} from "../environments/environment";
+import { CardExperienciaComponent } from './componentes/card-experiencia/card-experiencia.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardHabilidadComponent
+    CardHabilidadComponent,
+    CardExperienciaComponent
   ],
   imports: [
     BrowserModule,

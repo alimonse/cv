@@ -1,20 +1,32 @@
+<body background="assets/fondo/fondo1.png">
+
+
 <nav class="navbar navbar-light bg-light shadow">
   <div class="container-fluid">
 
-    <img class="rounded-circle img-fluid width-100"
-         src="assets/fotoPerfil.jpg"
-         style="box-shadow: 0 0 0 4px #ececec; margin-bottom: 1rem; max-width: 8rem"
-         alt="User image">
+<h3></h3>
 
-    <h3 class="navbar-brand animate__heartBeat animate__delay-5s" href="#">Alisson López</h3>
-    <h5> Desarrolladora web 🇪🇨 </h5>
+    <h3 class="navbar-brand animate__heartBeat animate__delay-5s text-center">
+      <img class="rounded-circle img-fluid width-100"
+           src="assets/fotoPerfil.jpg"
+           style="box-shadow: 0 0 0 4px #ececec; margin-bottom: 1rem; max-width: 5rem"
+           alt="User image">
+      <br>
+      Alisson López
+      <br>
+      Desarrolladora web 🇪🇨
+    </h3>
+  <h3></h3>
+
   </div>
 </nav>
 
-<div class="row" style="margin: 2rem">
-  <div class="col-sm-6" style="text-decoration-color: #00bcd4">
 
 
+<div class="row" style="margin: 2rem; padding-bottom: 5rem">
+  <div class="col-xl-6" style="text-decoration-color: #00bcd4">
+
+<h3 style="padding-bottom: 1rem">Proyectos realizados</h3>
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide"
@@ -22,44 +34,37 @@
           <a [href]="img.url"
              target="_blank"
           >
-
-
-          <img [src]="img.path" class="img-fluid" alt="" >
+            <img [src]="img.path" class="img-fluid" alt="" style="max-width: 35rem">
           </a>
         </div>
       </div>
     </div>
 
-
-  </div>
-  <div class="col-sm-6">
-    <p-tabView>
-      <p-tabPanel header="Sobre mi">
-        <p>Soy Alisson López egresada de la Escuela Politécnica Nacional,
-          me encuentro realizando mi tesis trata sobre el agendar citas utilizando un bot,
-          este bot administra básicamente los recursos de la empresa o de la persona
-          que desee utilizarlo, llevo alrededor de 3 años trabajando en Manticore labs
-          en donde empece como pasante y ahora ya soy parte del equipo, he sido parte
-          de proyectos desde la obtención de requerimientos hasta el despliegue y pruebas
-          finales, me gusta estar con mi familia jugar con mis mascotas y escuchar música,
-          me adapto con facilidad a las personas.</p>
+    <div class="row" style="padding-top: 1rem">
+      <div class="col-lg-4"></div>
+      <div class="col-lg-4 text-center">
+        <div class="d-grid gap-2">
+          <a type="button" class="btn btn-warning"
+             href="assets/cv-pdf/cv-alimonse.pdf" download="cv-alimonse.pdf">Descargar CV</a>
+        </div>
+      </div>
 
 
-        <a href="https://gitlab.com/alimonse"
-           target="_blank">
-          <img class="rounded-circle img-fluid width-100"
-               src="assets/redes/gitlab.png"
-               style="margin-bottom: 1rem; max-width: 2rem"
-               alt="User image"
-          >
-        </a>
 
+      <div class="col-lg-4 text-end" >
+
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4"></div>
+      <div class="col-lg-4 text-center" style="padding-top: 1rem">
 
         <a href="https://github.com/alimonse"
            target="_blank">
           <img class="rounded-circle img-fluid width-100"
                src="assets/redes/github_P.png"
-               style="margin-bottom: 1rem; max-width: 2rem"
+               style="margin-bottom: 1rem; max-width: 4rem"
                alt="User image"
           >
         </a>
@@ -68,7 +73,7 @@
            target="_blank">
           <img class="rounded-circle img-fluid width-100"
                src="assets/redes/linkedin.jpeg"
-               style="margin-bottom: 1rem; max-width: 2rem"
+               style="margin-bottom: 1rem; max-width: 3rem"
                alt="User image"
           >
         </a>
@@ -76,31 +81,56 @@
 
 
 
+      </div>
+      <div class="col-lg-4"></div>
+    </div>
+  </div>
+  <div class="col-xl-6">
+    <p-tabView [style]="">
+      <p-tabPanel header="Sobre mi">
+        <p style="text-align: justify">Soy Alisson López tengo 26 años desde chiquita me ha
+          gustado la tecnología al principio me llamaba mucho la atención electrónica y redes,
+          luego los caminos de la vida me llevaron al mundo web y me encanta, soy
+          egresada de la Escuela Politécnica Nacional,
+          me encuentro realizando mi tesis trata sobre el agendar citas utilizando un bot,
+          este bot administra básicamente los recursos de la empresa o de la persona
+          que desee utilizarlo, llevo alrededor de 3 años trabajando en Manticore labs
+          en donde empece como pasante y ahora ya soy parte del equipo, he sido parte
+          de proyectos desde la obtención de requerimientos hasta el despliegue y pruebas
+          finales, lo más bonito de mi trabajo es el equipo, la comunidad en general y lo accesible
+          que es el conocimiento hoy, me gusta estar con mi familia jugar con mis mascotas y escuchar música,
+          me adapto con facilidad a las personas, próximamente me graduaré y creo que es hora de salir de mi zona
+          de confort y buscar nuevos caminos.</p>
+
       </p-tabPanel>
       <p-tabPanel header="Experiencia laboral">
-        <mat-accordion class="align-items-start" multi >
+        <mat-accordion class="align-items-start" multi>
           <mat-expansion-panel [expanded]="step === 0">
             <mat-expansion-panel-header>
               <mat-panel-title>
-                <h5>Manticore Labs</h5>
+                <h3>Manticore Labs</h3>
+                <br>
               </mat-panel-title>
+              <mat-panel-description>
+                <h4><strong>Cargo:</strong> Web developer</h4>
+              </mat-panel-description>
             </mat-expansion-panel-header>
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label font-weight-bolder">Modulo vendedores</label>
-              <li>Cierre de período</li>
-              <li>Tracking vendedor</li>
-              <li>Asignación de rutas de ventas</li>
-              <li>Gestión de vendedores</li>
-              <label class="col-sm-3 col-form-label font-weight-bolder">Modulo facturación</label>
-              <li>Gestión pdf</li>
-              <li>Creación pdf</li>
-              <label class="col-sm-3 col-form-label font-weight-bolder">Outsourcing Bagó</label>
-              <li>Módulo ficha kam</li>
+
+            <div class="row">
+              <div class="col-lg-6" *ngFor="let experiencia of experiencias">
+                <app-card-experiencia
+                  [path]="experiencia.path"
+                  [herramientas]="experiencia.herramientas"
+                  [texto]="experiencia.texto"
+                  [titulo]="experiencia.titulo"
+                >
+                </app-card-experiencia>
+              </div>
             </div>
           </mat-expansion-panel>
         </mat-accordion>
       </p-tabPanel>
-      <p-tabPanel header="Skills">
+      <p-tabPanel header="Habilidades">
         <div class="row">
           <div class="col-sm-3 text-center"
                style="padding-top: 2rem"
@@ -119,3 +149,8 @@
   </div>
 </div>
 
+<footer>
+  <img src="" style="max-width: 17rem">
+  <div class="text-center">@alimonse © 2021
+  </div>
+</footer>
