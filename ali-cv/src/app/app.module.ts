@@ -12,6 +12,9 @@ import {SwiperModule} from "swiper/angular";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {CardModule} from "primeng/card";
 import { CardHabilidadComponent } from './componentes/card-habilidad/card-habilidad.component';
+import {AngularFireModule} from "@angular/fire";
+import {environment} from "../environments/environment";
+
 
 @NgModule({
   declarations: [
@@ -28,7 +31,9 @@ import { CardHabilidadComponent } from './componentes/card-habilidad/card-habili
     TabViewModule,
     SwiperModule,
     MatExpansionModule,
-    CardModule
+    CardModule,
+    AngularFireModule.initializeApp(environment.firebase),
+
 
 
   ],

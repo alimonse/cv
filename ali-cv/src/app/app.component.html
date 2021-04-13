@@ -11,7 +11,7 @@
   </div>
 </nav>
 
-<div class="row">
+<div class="row" style="margin: 2rem">
   <div class="col-sm-6" style="text-decoration-color: #00bcd4">
 
 
@@ -19,8 +19,13 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide"
              *ngFor="let img of imagenesSlide">
-          <img [src]="img" class="img-fluid" alt="">
-          <div class="swiper-pagination"></div>
+          <a [href]="img.url"
+             target="_blank"
+          >
+
+
+          <img [src]="img.path" class="img-fluid" alt="" >
+          </a>
         </div>
       </div>
     </div>
@@ -30,9 +35,47 @@
   <div class="col-sm-6">
     <p-tabView>
       <p-tabPanel header="Sobre mi">
-        <p>Soy Alisson López egresada de la Escuela politecnica nacional, me encuentro realizando mi tesis trata sobre
-          el agendamiento de citas utilizando un bot, este bot administrara basicamente
-          los recursos de la empresa o de la persona que desee utilizarlo, me gusta .</p>
+        <p>Soy Alisson López egresada de la Escuela Politécnica Nacional,
+          me encuentro realizando mi tesis trata sobre el agendar citas utilizando un bot,
+          este bot administra básicamente los recursos de la empresa o de la persona
+          que desee utilizarlo, llevo alrededor de 3 años trabajando en Manticore labs
+          en donde empece como pasante y ahora ya soy parte del equipo, he sido parte
+          de proyectos desde la obtención de requerimientos hasta el despliegue y pruebas
+          finales, me gusta estar con mi familia jugar con mis mascotas y escuchar música,
+          me adapto con facilidad a las personas.</p>
+
+
+        <a href="https://gitlab.com/alimonse"
+           target="_blank">
+          <img class="rounded-circle img-fluid width-100"
+               src="assets/redes/gitlab.png"
+               style="margin-bottom: 1rem; max-width: 2rem"
+               alt="User image"
+          >
+        </a>
+
+
+        <a href="https://github.com/alimonse"
+           target="_blank">
+          <img class="rounded-circle img-fluid width-100"
+               src="assets/redes/github_P.png"
+               style="margin-bottom: 1rem; max-width: 2rem"
+               alt="User image"
+          >
+        </a>
+
+        <a href="https://www.linkedin.com/in/alisson-l%C3%B3pez-7bb06b184/"
+           target="_blank">
+          <img class="rounded-circle img-fluid width-100"
+               src="assets/redes/linkedin.jpeg"
+               style="margin-bottom: 1rem; max-width: 2rem"
+               alt="User image"
+          >
+        </a>
+
+
+
+
       </p-tabPanel>
       <p-tabPanel header="Experiencia laboral">
         <mat-accordion class="align-items-start" multi >
@@ -43,17 +86,23 @@
               </mat-panel-title>
             </mat-expansion-panel-header>
             <div class="form-group row">
-              <label class="col-sm-3 col-form-label font-weight-bolder">RUC</label>
-              <div class="col-sm-9 col-form-label">
-                {{'No tiene' }}
-              </div>
+              <label class="col-sm-3 col-form-label font-weight-bolder">Modulo vendedores</label>
+              <li>Cierre de período</li>
+              <li>Tracking vendedor</li>
+              <li>Asignación de rutas de ventas</li>
+              <li>Gestión de vendedores</li>
+              <label class="col-sm-3 col-form-label font-weight-bolder">Modulo facturación</label>
+              <li>Gestión pdf</li>
+              <li>Creación pdf</li>
+              <label class="col-sm-3 col-form-label font-weight-bolder">Outsourcing Bagó</label>
+              <li>Módulo ficha kam</li>
             </div>
           </mat-expansion-panel>
         </mat-accordion>
       </p-tabPanel>
       <p-tabPanel header="Skills">
         <div class="row">
-          <div class="col-sm-4 text-center"
+          <div class="col-sm-3 text-center"
                style="padding-top: 2rem"
                *ngFor="let skill of skills">
             <app-card-habilidad

@@ -1,12 +1,28 @@
-import {Component} from '@angular/core';
+import {AfterViewInit, Component} from '@angular/core';
 import Swiper, {Autoplay} from 'swiper';
+
+Swiper.use([Autoplay]);
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
+
+  mySwiper: Swiper;
+
+  ngAfterViewInit() {
+    this.mySwiper = new Swiper('.swiper-container', {
+      cubeEffect: {
+        slideShadows: true,
+      },
+      autoplay: {
+        delay: 5000,
+      },
+    });
+  }
+
   title = 'ali-cv';
   value1: string;
   value2: string;
@@ -20,8 +36,15 @@ export class AppComponent {
   setStep;
 
   imagenesSlide = [
-    'assets/slide/img.png',
-    'assets/iconos/angular.png'
+    {
+      url: 'https://acaeros-7318f.web.app/',
+      path: 'assets/slide/filtros.png'
+    },
+    {
+      url: '',
+      path: 'assets/slide/bot_ventas.png'
+    },
+
   ]
 
   skills = [
@@ -112,17 +135,5 @@ export class AppComponent {
   ]
 
 
-  // Swiper.use([Autoplay]);
-  mySwiper: Swiper;
-  ngAfterViewInit() {
-    this.mySwiper = new Swiper('.swiper-container', {
-        cubeEffect: {
-          slideShadows: true,
-        },
-        autoplay: {
-          delay: 5000,
-        },
-      });
-  }
 }
 
