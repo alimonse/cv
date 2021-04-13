@@ -11,10 +11,12 @@ import {TabViewModule} from "primeng/tabview";
 import {SwiperModule} from "swiper/angular";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {CardModule} from "primeng/card";
+import { CardHabilidadComponent } from './componentes/card-habilidad/card-habilidad.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CardHabilidadComponent
   ],
   imports: [
     BrowserModule,

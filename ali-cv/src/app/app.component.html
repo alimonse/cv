@@ -15,25 +15,28 @@
   <div class="col-sm-6" style="text-decoration-color: #00bcd4">
 
 
-
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-<!--             *ngFor="let img of images">-->
-          <img src="assets/" class="img-fluid" alt="">
+        <div class="swiper-slide"
+             *ngFor="let img of imagenesSlide">
+          <img [src]="img" class="img-fluid" alt="">
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
 
 
-
-
   </div>
   <div class="col-sm-6">
     <p-tabView>
+      <p-tabPanel header="Sobre mi">
+        <p>Soy Alisson López egresada de la Escuela politecnica nacional, me encuentro realizando mi tesis trata sobre
+          el agendamiento de citas utilizando un bot, este bot administrara basicamente
+          los recursos de la empresa o de la persona que desee utilizarlo, me gusta .</p>
+      </p-tabPanel>
       <p-tabPanel header="Experiencia laboral">
-        <mat-accordion class="align-items-start" multi>
-          <mat-expansion-panel>
+        <mat-accordion class="align-items-start" multi >
+          <mat-expansion-panel [expanded]="step === 0">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 <h5>Manticore Labs</h5>
@@ -45,67 +48,23 @@
                 {{'No tiene' }}
               </div>
             </div>
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label font-weight-bolder">Razón social</label>
-              <div class="col-sm-9 col-form-label">
-                {{'No tiene' }}
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label font-weight-bolder">Nombre</label>
-              <div class="col-sm-9 col-form-label">
-                {{'No tiene' }}
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label font-weight-bolder">Representante legal</label>
-              <div class="col-sm-9 col-form-label">
-                {{'No tiene' }}
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label font-weight-bolder">Fecha inicio relaciones comerciales</label>
-              <div class="col-sm-9 col-form-label">
-                {{'No tiene' }}
-              </div>
-            </div>
           </mat-expansion-panel>
         </mat-accordion>
       </p-tabPanel>
       <p-tabPanel header="Skills">
-
         <div class="row">
-          <div class="col-sm-4">
-            <img class="rounded-circle img-fluid width-100"
-                 src="assets/fotoPerfil.jpg"
-                 style="box-shadow: 0 0 0 4px #ececec; margin-bottom: 1rem; max-width: 8rem"
-                 onerror="this.onerror=null; this.src='/assets/images/no-image-user.jpg'"
-                 alt="User image">
-          </div>
-          <div class="col-sm-4">
-            <img class="rounded-circle img-fluid width-100"
-                 src="assets/fotoPerfil.jpg"
-                 style="box-shadow: 0 0 0 4px #ececec; margin-bottom: 1rem; max-width: 8rem"
-                 onerror="this.onerror=null; this.src='/assets/images/no-image-user.jpg'"
-                 alt="User image">
-          </div>
-          <div class="col-sm-4">
-            <img class="rounded-circle img-fluid width-100"
-                 src="assets/fotoPerfil.jpg"
-                 style="box-shadow: 0 0 0 4px #ececec; margin-bottom: 1rem; max-width: 8rem"
-                 onerror="this.onerror=null; this.src='/assets/images/no-image-user.jpg'"
-                 alt="User image">
+          <div class="col-sm-4 text-center"
+               style="padding-top: 2rem"
+               *ngFor="let skill of skills">
+            <app-card-habilidad
+              [colorBarra]="skill.colorBarra"
+              [nombreSkill]="skill.nombreSkill"
+              [path]="skill.path"
+              [porcentaje]="skill.porcentaje"
+              [porcentajeSkill]="skill.porcentajeSkill">
+            </app-card-habilidad>
           </div>
         </div>
-
-
-
-
-
-      </p-tabPanel>
-      <p-tabPanel header="Sobre mi">
-        <p>Soy Alisson López egresada de la Escuela politecnica nacional, me encuentro realizando mi tesis trata sobre el agendamiento de citas utilizando un bot, este bot administrara basicamente
-          los recursos de la empresa o de la persona que desee utilizarlo, me gusta .</p>
       </p-tabPanel>
     </p-tabView>
   </div>

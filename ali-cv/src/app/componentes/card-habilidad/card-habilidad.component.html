@@ -1,0 +1,11 @@
+<p-card [style]="{'width': '15rem', 'margin-bottom': '2rem'}">
+  <img class="rounded-circle img-fluid width-100 text-center"
+       [src]="path"
+       style="box-shadow: 0 0 0 4px #ececec; max-width: 5rem;  margin-top: -60px; "
+       alt="angular image">
+  <h3 class="text-center" style="padding-left: 0.8rem; padding-top: 0.8rem">{{nombreSkill}}</h3>
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped bg-{{colorBarra}}" role="progressbar"
+         [style]="porcentaje" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">{{porcentajeSkill}}%</div>
+  </div>
+</p-card>
