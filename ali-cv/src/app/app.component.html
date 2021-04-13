@@ -1,3 +1,113 @@
-<h5>Basic</h5>
-<input type="text" pInputText [(ngModel)]="value1">
-<span class="p-ml-2">{{value1}}</span>
+<nav class="navbar navbar-light bg-light shadow">
+  <div class="container-fluid">
+
+    <img class="rounded-circle img-fluid width-100"
+         src="assets/fotoPerfil.jpg"
+         style="box-shadow: 0 0 0 4px #ececec; margin-bottom: 1rem; max-width: 8rem"
+         alt="User image">
+
+    <h3 class="navbar-brand animate__heartBeat animate__delay-5s" href="#">Alisson López</h3>
+    <h5> Desarrolladora web 🇪🇨 </h5>
+  </div>
+</nav>
+
+<div class="row">
+  <div class="col-sm-6" style="text-decoration-color: #00bcd4">
+
+
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+<!--             *ngFor="let img of images">-->
+          <img src="assets/" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+  <div class="col-sm-6">
+    <p-tabView>
+      <p-tabPanel header="Experiencia laboral">
+        <mat-accordion class="align-items-start" multi>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <h5>Manticore Labs</h5>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label font-weight-bolder">RUC</label>
+              <div class="col-sm-9 col-form-label">
+                {{'No tiene' }}
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label font-weight-bolder">Razón social</label>
+              <div class="col-sm-9 col-form-label">
+                {{'No tiene' }}
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label font-weight-bolder">Nombre</label>
+              <div class="col-sm-9 col-form-label">
+                {{'No tiene' }}
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label font-weight-bolder">Representante legal</label>
+              <div class="col-sm-9 col-form-label">
+                {{'No tiene' }}
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label font-weight-bolder">Fecha inicio relaciones comerciales</label>
+              <div class="col-sm-9 col-form-label">
+                {{'No tiene' }}
+              </div>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </p-tabPanel>
+      <p-tabPanel header="Skills">
+
+        <div class="row">
+          <div class="col-sm-4">
+            <img class="rounded-circle img-fluid width-100"
+                 src="assets/fotoPerfil.jpg"
+                 style="box-shadow: 0 0 0 4px #ececec; margin-bottom: 1rem; max-width: 8rem"
+                 onerror="this.onerror=null; this.src='/assets/images/no-image-user.jpg'"
+                 alt="User image">
+          </div>
+          <div class="col-sm-4">
+            <img class="rounded-circle img-fluid width-100"
+                 src="assets/fotoPerfil.jpg"
+                 style="box-shadow: 0 0 0 4px #ececec; margin-bottom: 1rem; max-width: 8rem"
+                 onerror="this.onerror=null; this.src='/assets/images/no-image-user.jpg'"
+                 alt="User image">
+          </div>
+          <div class="col-sm-4">
+            <img class="rounded-circle img-fluid width-100"
+                 src="assets/fotoPerfil.jpg"
+                 style="box-shadow: 0 0 0 4px #ececec; margin-bottom: 1rem; max-width: 8rem"
+                 onerror="this.onerror=null; this.src='/assets/images/no-image-user.jpg'"
+                 alt="User image">
+          </div>
+        </div>
+
+
+
+
+
+      </p-tabPanel>
+      <p-tabPanel header="Sobre mi">
+        <p>Soy Alisson López egresada de la Escuela politecnica nacional, me encuentro realizando mi tesis trata sobre el agendamiento de citas utilizando un bot, este bot administrara basicamente
+          los recursos de la empresa o de la persona que desee utilizarlo, me gusta .</p>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+</div>
+
