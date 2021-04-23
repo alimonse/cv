@@ -78,23 +78,23 @@ export class AppComponent implements AfterViewInit {
   imagenesSlide = [
     {
       url: 'https://acaeros-7318f.web.app/',
-      path: 'assets/slide/filtros.png'
+      path: 'assets/slide/filtro.png'
     },
     {
       url: '',
-      path: 'assets/slide/bot_ventas.png'
+      path: 'assets/slide/bot.png'
     },
     {
       url: '',
-      path: 'assets/slide/tracking-vendedores.png'
+      path: 'assets/slide/tracking.png'
     },
     {
       url: '',
-      path: 'assets/slide/gestion-vendedores.png'
+      path: 'assets/slide/gestion.png'
     },
     {
       url: '',
-      path: 'assets/slide/ficha-kam.png'
+      path: 'assets/slide/ficha.png'
     },
 
 
