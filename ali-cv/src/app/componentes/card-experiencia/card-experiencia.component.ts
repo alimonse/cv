@@ -7,7 +7,8 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class CardExperienciaComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
@@ -24,4 +25,11 @@ export class CardExperienciaComponent implements OnInit {
   @Input()
   herramientas: string;
 
+  arreglo: [];
+
+  funcionEquis(): [] {
+    this.arreglo.forEach(() => {
+
+    });
+  }
 }
