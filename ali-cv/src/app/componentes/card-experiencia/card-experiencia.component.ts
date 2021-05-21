@@ -25,11 +25,4 @@ export class CardExperienciaComponent implements OnInit {
   @Input()
   herramientas: string;
 
-  arreglo: [];
-
-  funcionEquis(): [] {
-    this.arreglo.forEach(() => {
-
-    });
-  }
 }
