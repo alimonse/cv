@@ -1,0 +1,13 @@
+  <p-timeline [value]="events" align="alternate" styleClass="customized-timeline">
+    <ng-template pTemplate="marker" let-event>
+            <span class="custom-marker shadow-2" [style.backgroundColor]="event.color">
+                <i [ngClass]="event.icon"></i>
+            </span>
+    </ng-template>
+    <ng-template pTemplate="content" let-event>
+      <p-card [header]="event.status" [subheader]="event.date">
+        <p> {{event.texto}} </p>
+      </p-card>
+    </ng-template>
+  </p-timeline>
+

@@ -15,13 +15,16 @@ import { CardHabilidadComponent } from './componentes/card-habilidad/card-habili
 import {AngularFireModule} from "@angular/fire";
 import {environment} from "../environments/environment";
 import { CardExperienciaComponent } from './componentes/card-experiencia/card-experiencia.component';
+import { CursosCaminoComponent } from './componentes/cursos-camino/cursos-camino.component';
+import {TimelineModule} from "primeng/timeline";
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CardHabilidadComponent,
-    CardExperienciaComponent
+    CardExperienciaComponent,
+    CursosCaminoComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ import { CardExperienciaComponent } from './componentes/card-experiencia/card-ex
     SwiperModule,
     MatExpansionModule,
     CardModule,
+    TimelineModule,
     AngularFireModule.initializeApp(environment.firebase),
 
 
