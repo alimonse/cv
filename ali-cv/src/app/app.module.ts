@@ -17,6 +17,7 @@ import {environment} from "../environments/environment";
 import { CardExperienciaComponent } from './componentes/card-experiencia/card-experiencia.component';
 import { CursosCaminoComponent } from './componentes/cursos-camino/cursos-camino.component';
 import {TimelineModule} from "primeng/timeline";
+import {AccordionModule} from "primeng/accordion";
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import {TimelineModule} from "primeng/timeline";
     CardModule,
     TimelineModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AccordionModule,
 
 
 

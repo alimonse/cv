@@ -86,7 +86,7 @@ export class CursosCaminoComponent implements OnInit {
         icon: PrimeIcons.STAR,
         color: '#FF9800',
         image: 'game-controller.jpg',
-        texto: 'Aplicaciones móviles hibridas'
+        texto: 'Aplicaciones móviles híbridas'
       },
       {
         status: 'Python',
@@ -94,7 +94,7 @@ export class CursosCaminoComponent implements OnInit {
         icon: PrimeIcons.STAR,
         color: '#FF9800',
         image: 'game-controller.jpg',
-        texto: 'Curso basico'
+        texto: 'Curso básico'
       },
     ];
   }
